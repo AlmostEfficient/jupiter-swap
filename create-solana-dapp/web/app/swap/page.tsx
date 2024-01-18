@@ -77,11 +77,7 @@ export default function Swap() {
 
     const quote = await (
       await fetch(
-        `https://quote-api.jup.ag/v6/quote
-        ?inputMint=${fromAsset.mint}
-        &outputMint=${toAsset.mint}
-        &amount=${currentAmount * Math.pow(10, fromAsset.decimals)}
-        &slippage=0.5`
+        `https://quote-api.jup.ag/v6/quote?inputMint=${fromAsset.mint}&outputMint=${toAsset.mint}&amount=${currentAmount * Math.pow(10, fromAsset.decimals)}&slippage=0.5`
       )
     ).json();
 
@@ -130,7 +126,15 @@ export default function Swap() {
         maxRetries: 2,
       });
 
+      const latestBlockHash = await connection.getLatestBlockhash();
+      await connection.confirmTransaction({
+        blockhash: latestBlockHash.blockhash,
+        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+        signature: txid
+      }, 'confirmed');
+      
       console.log(`https://solscan.io/tx/${txid}`);
+
     } catch (error) {
       console.error('Error signing or sending the transaction:', error);
     }
