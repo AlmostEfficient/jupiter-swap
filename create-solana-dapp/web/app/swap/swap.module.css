@@ -1,0 +1,101 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Segoe UI';
+}
+
+.innerContainer {
+  width: 600px;
+  background-color: #100f0f;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 25px;
+  border: 1px solid #ff00ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; Center the inputs */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.labels{
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.inputField,
+.selectField,
+.button {
+  width: 90%; /* Set all to the same width */
+  margin-left: auto; /* These two lines ensure the inputs */
+  margin-right: auto; /* and button are centered */
+}
+
+.inputField,
+.selectField {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.inputField{
+  max-width: 515px;
+}
+
+.selectField{
+  max-width:550px;
+}
+
+.inputField:focus,
+.selectField:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #cccccc; /* Or any color that fits your design */
+}
+
+.button {
+  max-width: 550px;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:disabled {
+  background-color: rgb(84, 61, 84); /* Make sure the button is greyed out */
+  cursor: not-allowed; /* Change cursor on hover */
+}
+
+.button:hover {
+  background-color: #a63db8; /* Darker shade of purple for hover state */
+}
+
+/* Add a custom dropdown arrow for select fields */
+.selectField {
+  background: url('data:image/svg+xml;utf8,<svg ...></svg>') no-repeat right 10px center / 16px 16px #333;
+  -webkit-appearance: none; /* Removes default styling on select elements */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Add any additional responsive styles if necessary */
+@media (max-width: 640px) {
+  .innerContainer {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}

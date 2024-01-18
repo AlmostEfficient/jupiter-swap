@@ -18,6 +18,7 @@
     "@tanstack/react-query-next-experimental": "5.8.4",
     "bs58": "5.0.0",
     "buffer": "6.0.3",
+    "cross-fetch": "^4.0.0",
     "encoding": "0.1.13",
     "next": "13.4.4",
     "react": "18.2.0",
