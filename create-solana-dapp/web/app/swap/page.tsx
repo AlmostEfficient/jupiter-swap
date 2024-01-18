@@ -40,7 +40,7 @@ export default function Swap() {
 
   // Need a custom RPC so you don't get rate-limited, don't rely on users' wallets
   const connection = new Connection(
-    'https://mainnet.helius-rpc.com/?api-key=19aca967-355f-4436-b6f7-b06793352037'
+    'https://mainnet.helius-rpc.com/?api-key=YOUR_API_KEY_HERE'
   );
 
   const handleFromAssetChange = async (
