@@ -15,10 +15,10 @@ function Page() {
 
   function launchJupiter() {
     if (window.Jupiter) {
-      window.Jupiter.init({
+      window.Jupiter.init({ 
         displayMode: "integrated",
         integratedTargetId: "integrated-terminal",
-        endpoint: "https://mainnet.helius-rpc.com/?api-key=19aca967-355f-4436-b6f7-b06793352037",
+        endpoint: "https://mainnet.helius-rpc.com/?api-key=YOUR_API_KEY_HERE",
         strictTokenList: false,
         defaultExplorer: "SolanaFM",
         formProps: {
@@ -36,7 +36,6 @@ function Page() {
 
       <div id="integrated-terminal"></div>
 
-      <button onClick={launchJupiter}>Launch Jupiter</button>
     </div>
   );
 }

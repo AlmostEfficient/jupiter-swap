@@ -63,13 +63,13 @@ export default function Swap() {
       setFromAmount(Number(event.target.value));
     };
     
-  const debounceQuoteCall = useCallback(debounce(quoteAndSwap, 500), []);
+  const debounceQuoteCall = useCallback(debounce(getQuote, 500), []);
 
   useEffect(() => {
     debounceQuoteCall(fromAmount);
   }, [fromAmount, debounceQuoteCall]);
 
-  async function quoteAndSwap(currentAmount: number) {
+  async function getQuote(currentAmount: number) {
     if (isNaN(currentAmount) || currentAmount <= 0) {
       console.error('Invalid fromAmount value:', currentAmount);
       return;
