@@ -1,5 +1,5 @@
 # jupiter-swap
-An implementation of the Jupiter Swap API
+An implementation of the Jupiter Swap API - here's a video walkthrough of all this code: [Integrate Jupiter Swap in 15 minutes](https://www.youtube.com/watch?v=-LzvOSgR5DU)
 
 ## HTML
 Plain HTML file that imports the terminal via CDN. 
