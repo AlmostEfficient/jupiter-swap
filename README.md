@@ -14,3 +14,6 @@ Plain HTML file that imports the terminal via CDN.
 
 ### Create-solana-dapp
 Uses the [create-solana-dapp](https://github.com/solana-developers/create-solana-dapp) template to create a new project, then imports the terminal via CDN.
+
+### API Implementation
+The API implementation is at [create-solana-dapp/web/app/swap/page.tsx](https://github.com/AlmostEfficient/jupiter-swap/blob/main/create-solana-dapp/web/app/swap/page.tsx). It's configured to only have 4 assets - USDC, SOL, BONK, WIF. You'll need to add your own token mint addresses, or you can use the [token list API](https://station.jup.ag/docs/token-list/token-list-api) for validated tokens.
